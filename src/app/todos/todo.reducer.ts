@@ -22,13 +22,6 @@ const _todoReducer = createReducer(
   }),
 
   on(actions.editarItem, (state , {id , texto}) => {
-    console.log('Antes:', state);
-    console.log('Después:', state.map(el => {
-      if (el.id === id) {
-        return { ...el, texto };
-      }
-      return el;
-    }));
 
     return state.map(el => {
       if (el.id === id) {
@@ -36,7 +29,9 @@ const _todoReducer = createReducer(
       }
         return el
     })
-  })
+  }),
+
+  on(actions.borrarItem , (state, {id})=> state.filter(el => el.id !== id))
 
 );
 

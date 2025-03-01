@@ -11,7 +11,12 @@ export const toggleItem = createAction(
 );
 
 export const editarItem = createAction(
-  '[TODO] actualiza toggle',
+  '[TODO] edita texto',
   props<{id: number , texto: string}>()
+);
+
+export const borrarItem = createAction(
+  '[TODO] borra item',
+  props<{id: number}>()
 );
 
