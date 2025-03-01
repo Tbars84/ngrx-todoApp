@@ -48,4 +48,10 @@ export class TodoItemComponent implements OnInit {
       })
     )
   }
+
+  borrarItem(){
+    this.store.dispatch(actions.borrarItem(
+      {id: this.todoFeatures.id}
+    ))
+  }
 }
