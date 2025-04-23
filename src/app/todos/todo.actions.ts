@@ -20,3 +20,7 @@ export const borrarItem = createAction(
   props<{id: number}>()
 );
 
+export const toggleAll = createAction(
+  '[TODO] Completar todos',
+  props<{toggleAll: boolean}>()
+);

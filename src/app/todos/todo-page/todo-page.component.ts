@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../app-reducers';
+import * as actions from '../todo.actions';
 
 @Component({
   selector: 'app-todo-page',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './todo-page.component.css'
 })
 export class TodoPageComponent implements  OnInit{
+  toggleAllTodos: boolean = false;
 
-  constructor(){ }
+  constructor(private store: Store<AppState>){ }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
+  toggleAll(){
+    this.toggleAllTodos = !this.toggleAllTodos;
+    this.store.dispatch(actions.toggleAll({toggleAll: this.toggleAllTodos}))
   }
 }
