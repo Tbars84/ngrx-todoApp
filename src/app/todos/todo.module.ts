@@ -9,7 +9,6 @@ import { TodoFooterComponent } from './todo-footer/todo-footer.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoPageComponent } from './todo-page/todo-page.component';
-import { FilterByTagPipe } from './shared/pipe/filter-by-tag.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { FilterByTagPipe } from './shared/pipe/filter-by-tag.pipe';
     TodoItemComponent,
     TodoListComponent,
     TodoPageComponent,
-    FilterByTagPipe
   ],
   imports: [
     CommonModule,

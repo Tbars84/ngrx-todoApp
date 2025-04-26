@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Todo } from '../../state/models/todo.model';
-import { SetValidFilters } from '../../state/filter-state/filter.actions';
+import { Todo } from '../../../todos/state/models/todo.model';
+import { SetValidFilters } from '../../../todos/state/filter-state/filter.actions';
 
 @Pipe({
   name: 'filterByTag'

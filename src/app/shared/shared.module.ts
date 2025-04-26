@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CapitalizePipe } from "./pipes/capitalize/capitalize.pipe";
+import { FilterByTagPipe } from './pipes/filter-todo-by-tag/filter-by-tag.pipe';
 
 const pipes = [
-  CapitalizePipe
+  CapitalizePipe,
+  FilterByTagPipe
 ]
 
 @NgModule({
