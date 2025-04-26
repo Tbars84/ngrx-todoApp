@@ -11,10 +11,14 @@ import { AppState } from '../../app-reducers';
 export class TodoFooterComponent {
   activeFilter: actions.SetValidFilters = 'todos'
   filtersArray: actions.SetValidFilters[] = ['todos','pendientes','completados']
+  pendingTasks: number = 0;
   constructor(private store:Store<AppState>){ }
 
   ngOnInit(){
-    this.store.select('filter').subscribe(filter => this.activeFilter = filter);
+    this.store.subscribe( state =>{
+      this.activeFilter = state.filter;
+      this.pendingTasks = state.todos.filter(item => !item.completado).length
+    })
   }
 
   updateFilter(selectedFilter: actions.SetValidFilters){
