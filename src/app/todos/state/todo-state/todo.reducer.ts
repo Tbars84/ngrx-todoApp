@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import * as actions from './todo.actions';
-import { Todo } from './models/todo.model';
+import { Todo } from '../models/todo.model';
 
 export const estadoInicial :Todo[] = [];
 
