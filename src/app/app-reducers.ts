@@ -5,12 +5,12 @@ import { SetValidFilters } from "./todos/state/filter-state/filter.actions";
 import { filterReducer } from "./todos/state/filter-state/filter.reducer";
 
 
-export interface AppState {
+export interface AppTodoState {
   todos: Todo[],
   filter: SetValidFilters
 }
 
-export const appReducers: ActionReducerMap<AppState> = {
+export const appTODOReducers: ActionReducerMap<AppTodoState> = {
   todos: todoReducer,
   filter: filterReducer
 }

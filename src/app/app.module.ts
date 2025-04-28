@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { appReducers } from './app-reducers';
+import { appTODOReducers } from './app-reducers';
 
 import { AppComponent } from './app.component';
 import { TodoModule } from './todos/todo.module';
@@ -19,7 +19,7 @@ import { TodoModule } from './todos/todo.module';
     ReactiveFormsModule,
     AppRoutingModule,
     TodoModule,
-    StoreModule.forRoot(appReducers),
+    StoreModule.forRoot(appTODOReducers),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [],

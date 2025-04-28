@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { AppState } from '../../app-reducers';
-import * as actions from '../state/todo-state/todo.actions';
+import { AppTodoState } from '../../../app-reducers';
+import * as actions from '../../state/todo-state/todo.actions';
 
 @Component({
   selector: 'app-todo-add',
@@ -12,7 +12,7 @@ import * as actions from '../state/todo-state/todo.actions';
 export class TodoAddComponent {
   txtInput: FormControl
 
-  constructor(private store: Store<AppState>){
+  constructor(private store: Store<AppTodoState>){
     this.txtInput = new FormControl('', Validators.required);
   }
 

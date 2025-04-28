@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import * as actions from '../state/filter-state/filter.actions';
+import * as actions from '../../state/filter-state/filter.actions';
 import { Store } from '@ngrx/store';
-import { AppState } from '../../app-reducers';
+import { AppTodoState } from '../../../app-reducers';
 
 @Component({
   selector: 'app-todo-footer',
@@ -12,7 +12,7 @@ export class TodoFooterComponent {
   activeFilter: actions.SetValidFilters = 'todos'
   filtersArray: actions.SetValidFilters[] = ['todos','pendientes','completados']
   pendingTasks: number = 0;
-  constructor(private store:Store<AppState>){ }
+  constructor(private store:Store<AppTodoState>){ }
 
   ngOnInit(){
     this.store.subscribe( state =>{
