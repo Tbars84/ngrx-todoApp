@@ -15,6 +15,9 @@ import { DashboardComponent } from './ingreso-egreso-app/components/dashboard/da
 import { IngresosEgresosComponent } from './ingreso-egreso-app/components/ingresos-egresos/ingresos-egresos.component';
 import { EstadisticasComponent } from './ingreso-egreso-app/components/ingresos-egresos/estadisticas/estadisticas.component';
 import { DetalleComponent } from './ingreso-egreso-app/components/ingresos-egresos/detalle/detalle.component';
+import { FooterComponent } from './ingreso-egreso-app/shared/components/footer/footer.component';
+import { NavbarComponent } from './ingreso-egreso-app/shared/components/navbar/navbar.component';
+import { SidebarComponent } from './ingreso-egreso-app/shared/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { DetalleComponent } from './ingreso-egreso-app/components/ingresos-egres
     IngresosEgresosComponent,
     EstadisticasComponent,
     DetalleComponent,
+    FooterComponent,
+    NavbarComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
