@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
@@ -11,7 +12,6 @@ import { DetalleComponent } from './components/ingresos-egresos/detalle/detalle.
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +24,14 @@ import { MainComponent } from './components/main/main.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    MainComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   exports:[
     LoginComponent,
-    MainComponent
   ]
 })
 export class IngresoEgresoModule { }
