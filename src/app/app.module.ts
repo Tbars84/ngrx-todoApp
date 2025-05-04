@@ -9,33 +9,17 @@ import { appTODOReducers } from './app-reducers';
 
 import { AppComponent } from './app.component';
 import { TodoModule } from './todos/todo.module';
-import { LoginComponent } from './ingreso-egreso-app/components/auth/login/login.component';
-import { RegisterComponent } from './ingreso-egreso-app/components/auth/register/register.component';
-import { DashboardComponent } from './ingreso-egreso-app/components/dashboard/dashboard.component';
-import { IngresosEgresosComponent } from './ingreso-egreso-app/components/ingresos-egresos/ingresos-egresos.component';
-import { EstadisticasComponent } from './ingreso-egreso-app/components/ingresos-egresos/estadisticas/estadisticas.component';
-import { DetalleComponent } from './ingreso-egreso-app/components/ingresos-egresos/detalle/detalle.component';
-import { FooterComponent } from './ingreso-egreso-app/shared/components/footer/footer.component';
-import { NavbarComponent } from './ingreso-egreso-app/shared/components/navbar/navbar.component';
-import { SidebarComponent } from './ingreso-egreso-app/shared/components/sidebar/sidebar.component';
+import { IngresoEgresoModule } from './ingreso-egreso-app/ingreso-egreso.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    DashboardComponent,
-    IngresosEgresosComponent,
-    EstadisticasComponent,
-    DetalleComponent,
-    FooterComponent,
-    NavbarComponent,
-    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    IngresoEgresoModule,
     TodoModule,
     StoreModule.forRoot(appTODOReducers),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
